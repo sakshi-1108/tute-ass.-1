@@ -1,0 +1,17 @@
+// accept string
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    string input;  // Declare a string variable
+
+    // Accept a string from the user
+    cout << "Enter a string: ";
+    getline(cin, input);  // Use getline to allow spaces in the string
+
+    // Display the entered string
+    cout << input << endl;
+
+    return 0;
+}
