@@ -1,0 +1,21 @@
+// palindrome
+#include <iostream>
+using namespace std;
+
+    int i=0, j=str.length()-1;
+    bool isPalindrome = true;
+    while(i<j){
+        if((str[i]) != (str[j])){
+            isPalindrome = false;
+            break;
+        }
+        i++;
+        j--;
+    }
+    if(isPalindrome){
+        cout<<"The string is a palindrome"<<endl;
+    }
+    else{
+        cout<<"The string is not a palindrome"<<endl;
+    }
+    
