@@ -1,0 +1,47 @@
+// next prime number
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n, i, prime = 1;
+
+    cout << "Enter a positive integer: ";
+    cin >> n;
+
+    // Checking if n is prime
+    if (n < 2) {
+        prime = 0;
+    } else {
+        for (i = 2; i * i <= n; i++) {
+            if (n % i == 0) {
+                prime = 0;
+                break;
+            }
+        }
+    }
+
+    if (prime == 1) {
+        cout << n << " is a prime number." << endl;
+
+        // Finding the next prime number
+        int next = n + 1;
+        while (true) {
+            int is_next_prime = 1;
+            for (i = 2; i * i <= next; i++) {
+                if (next % i == 0) {
+                    is_next_prime = 0;
+                    break;
+                }
+            }
+            if (is_next_prime == 1) {
+                cout << "Next prime number is: " << next << endl;
+                break;
+            }
+            next++;
+        }
+    } else {
+        cout << "Not Prime" << endl;
+    }
+
+    return 0;
+}
