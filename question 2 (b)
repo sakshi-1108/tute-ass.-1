@@ -1,0 +1,36 @@
+// reverse array
+#include <iostream>
+using namespace std;
+
+int main() {
+    int size;
+
+    // Accept the size of the array
+    cout << "Enter the size of the array: ";
+    cin >> size;
+
+    int arr[size];  // Declare the array with the user-defined size
+
+    // Accept the elements of the array
+    cout << "Enter " << size << " elements: ";
+    for (int i = 0; i < size; i++) {
+        cin >> arr[i];
+    }
+
+    // Reverse the array directly using a loop
+    for (int i = 0; i < size / 2; i++) {
+        // Swap elements at position i and size-i-1
+        int temp = arr[i];
+        arr[i] = arr[size - i - 1];
+        arr[size - i - 1] = temp;
+    }
+
+    // Display the reversed array
+    cout << "The reversed array is: ";
+    for (int i = 0; i < size; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
